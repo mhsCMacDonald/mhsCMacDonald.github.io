@@ -9,7 +9,7 @@ function draw() {
 
 
 //ground
-  rect(0,350,400,100);
+  rect(0,350,399,49);
   
 //snowman body
   //bottom circle
