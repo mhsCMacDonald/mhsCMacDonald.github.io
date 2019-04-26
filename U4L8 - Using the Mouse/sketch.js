@@ -5,7 +5,7 @@ let size = 20;
 
 function setup() {
   var firstCanvas = createCanvas(800, 400);  //create window for drawing
-  firstCanvas.parent('call sketch.js');  //allow this code to be called by <div id="sketch1"> in index.html
+  firstCanvas.parent('call sketch.js');  //allow this code to be called by <div id="call sketch.js"> in index.html
 }
 
 function draw() {
