@@ -1,7 +1,8 @@
 /* U4L8 - Using the Mouse.
-Created by Charlie MacDonald on apr 25th, 2019*/
+Created by Charlie MacDonald on apr 25th, 2019
+Last modified on apr 29th, 2019*/
 
-let size = 20;
+let size = 20; //this variable will be changed by the mouse scroll wheel later on
 
 function setup() {
   var firstCanvas = createCanvas(800, 400);  //create window for drawing
@@ -9,6 +10,10 @@ function setup() {
 }
 
 function draw() {
+    if (mouseIsPressed) {
+      line(50,50,mouseX,mouseY);
+      //when a mouse button is held down, draw a line from 50,50 to the mouse position.
+    }
 }
 
 function mouseMoved() {
@@ -57,7 +62,7 @@ function mouseWheel(event) {
     rect(mouseX+size,mouseY+size, size,size);
 }
 
-//The code below will allow the user to click and drag the shape
+//The code below will allow the user to click and drag the shape, unlike in the example
 function mouseDragged(event) {
   background(255);
   fill(random(255), random(255), random(255));
