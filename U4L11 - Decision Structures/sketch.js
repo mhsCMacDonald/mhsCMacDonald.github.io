@@ -11,8 +11,7 @@ Created by Charlie MacDonald on May 3rd, 2019*/
 function setup() {
   var firstCanvas = createCanvas(800,600);  //create window for drawing
   firstCanvas.parent('call sketch.js');  //allow this code to be called by <div id="call sketch.js"> in index.html
-  frameRate(30); /*set framerate to 10 to add a delay between questions - prevent the user from
-  answering multple questions while holding 1 letter.*/
+  frameRate(60);
 }
 
 function draw() {
