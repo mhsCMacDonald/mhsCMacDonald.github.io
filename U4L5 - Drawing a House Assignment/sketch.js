@@ -1,5 +1,6 @@
 /* U4L5 - Drawing a House Assignment
-Created by Charlie MacDonald on March 18, 2019*/
+Created by Charlie MacDonald on March 18, 2019.
+This code will draw a house with some colour and no outlines.*/
 
 function setup() {
   createCanvas(800,600);
