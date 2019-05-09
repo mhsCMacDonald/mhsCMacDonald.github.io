@@ -1,5 +1,6 @@
 /* U4L4 - Snowman Drawing
-Finished by Charlie MacDonald on March 7th, 2019*/
+Finished by Charlie MacDonald on March 7th, 2019
+This code will draw a simple snowman with a coloured background.*/
 
 function setup() {
   createCanvas(400,400);
