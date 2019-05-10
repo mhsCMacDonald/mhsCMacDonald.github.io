@@ -1,7 +1,11 @@
- //U4L7 by Charlie MacDonald. Started on apr 10th, 2019.
+ /*U4L7 by Charlie MacDonald.
+ Started on apr 10th, 2019. Finished apr 25th, 2019.
 
+ This code will allow a shape to move with the arrow keys, as well as bounce
+ when it collides wiht another shape or the edges of the canvas. Friction and gravity
+ are simulated as well.*/
 
-//Global variables:
+//Create the global variables:
 let x=50;
 let y=100;
 
@@ -16,7 +20,6 @@ let size=100;
 function setup() {
   createCanvas(1000,800);
   frameRate(60);
-
 }
 
 function draw() {
@@ -24,27 +27,28 @@ function draw() {
   background(200);
 
   //check for a collision
-    hit = collideRectRect(x,y,size,size, x2,y2,size+3,size+3);
-    print(hit); //print a message if collision is detected
+  hit = collideRectRect(x,y,size,size, x2,y2,size+3,size+3);
+  print(hit); //print a message to console if collision is detected
 
+    //Reverse speed if hit is true - this causes the shape to "bounce"
     if (hit===true) {
       xSpeed=xSpeed*-1;
       ySpeed=ySpeed*-1;
     }
 
-//draw the rectangles
-rectMode(CENTER);
+  //draw the rectangles
+  rectMode(CENTER);
   fill(178, 215, 255);
   rect(x,y,size,size);
 
-  fill(27, 226, 21); //slime green - this rectangle's collision will be "sticky"
+  fill(27, 226, 21); //slime green colour - this rectangle's collision feels "sticky"
   rect(x2,y2,size,size);
 
-//move the first rectangle:
+  //move the first rectangle (the second one is stationary):
   x=x+xSpeed;
   y=y+ySpeed;
 
-//Bounce code. the "||" acts as an "or" statement.
+  //Bounce code. the "||" acts as an "or" statement.
   if (y>=(height-(size/2)) || y<=(size/2)) {
     ySpeed=ySpeed*(-1);
   }
@@ -53,7 +57,8 @@ rectMode(CENTER);
     xSpeed=xSpeed*-1;
   }
 
-//The next 4 "if" statements allow the square to move. "&&" is an "and" logic operator
+  /*The next 4 "if" statements allow the square to move. "&&" is an "and" logic operator.
+  If a key is pressed AND the shape hasn't gone off the canvas, move the shape.*/
   if (keyIsDown(LEFT_ARROW) && x>0+53) {
     xSpeed=xSpeed-2;
   }
@@ -70,7 +75,7 @@ rectMode(CENTER);
     ySpeed=ySpeed-2;
   }
 
-//The next 3 "if" statements cause friction
+  //The next 3 "if" statements cause friction by reducing speed over time.
   if (xSpeed>0) {
     xSpeed=xSpeed-xSpeed*0.1;
   }
@@ -83,7 +88,7 @@ rectMode(CENTER);
     ySpeed=ySpeed-ySpeed*0.1;
   }
 
-//gravity:
+  //gravity:
   if (y<height-53) {
     ySpeed=ySpeed+0.3
   }
