@@ -1,7 +1,8 @@
 /* U4L10 - Sounds and Images
-Created by Charlie MacDonald on May 2nd, 2019*/
+Created by Charlie MacDonald on May 2nd, 2019. Finished on May 5th, 2019.
+This code will display an image and play a sound when the page loads/the user clicks.*/
 
-//Create variables that will hold the images and sounds to allow them to be called later
+//Create global variables that will store the images and sounds to allow them to be called later
 let mySound;
 let img;
 
