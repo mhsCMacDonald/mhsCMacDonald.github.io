@@ -1,5 +1,8 @@
 /* U4L12 - Looping Structures
-Created by Charlie MacDonald on May 5rd, 2019*/
+Created by Charlie MacDonald on May 7th, 2019. Finished on May 9th, 2019.
+
+This program will use "for" loops to make a row and column of rectangles move in a pattern.
+I seeked John Guo's help to find a syntax error/confusion in my "for" loop code*/
 
 //Global variables to make tweaking easier:
 let x = 100;
