@@ -79,6 +79,7 @@ want to restart the game.*/
   //create a varibale that tests for collision and is true when the two rectangles collide:
     hit = collideRectRect(x,y,size,size, x2,y2,size+3,size+3);
     //make rectangles bounce if they hit each other:
+    print(hit); //print a message to console if collision is detected
     if (hit===true) {
       xSpeed=xSpeed*-1;
       ySpeed=ySpeed*-1;
