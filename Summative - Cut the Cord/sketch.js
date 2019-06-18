@@ -72,18 +72,21 @@ function draw() {
   }
 
   //If direction = 1 (up), make the ball fall up
-  else if (direction == 1) {
+  else if (direction == 1 && hitarrow == true) {
+  ballySpeed=0;
   ballySpeed=ballySpeed-0.2*ballcanmove;
   }
 
   //If direction = 2 (right) , make the ball fall right
-  else if (direction == 2) {
-  //ballySpeed=ballySpeed+0.2*ballcanmove;
+  else if (direction == 2 && hitarrow == true) {
+  ballxSpeed=0;
+  ballxSpeed=ballySpeed+0.2*ballcanmove;
   }
 
   //If direction = 3 (left), make the ball fall left
-  else if (direction == 4) {
-  //ballySpeed=ballySpeed+0.2*ballcanmove;
+  else if (direction == 4 && hitarrow == true) {
+    ballxSpeed=0;
+    ballxSpeed=ballySpeed-0.2*ballcanmove;
   }
 
   /*If the player presses enter, start/reset to level 1.
@@ -165,6 +168,10 @@ function draw() {
     fill(255);
     ellipse(ballx,bally,100); //draw the ball
 
+    //Check if the ball is touching a direction-change arrow:
+    hitarrow = collideRectCircle(400,300,100,100,ballx,bally,100);
+    print("Ball touching an arrow? " + hitarrow);
+
     //Check if mouse is touching the circle
 	  hit = collidePointCircle(mouseX,mouseY,ballx,bally,100);
     print("Mouse touching ball? " + hit);
@@ -214,16 +221,16 @@ function draw() {
     }
 
     if (direction == 1) {
-      image(arrow1img,50,50);
+      image(arrow1img,450,350);
     }
     if (direction == 2) {
-      image(arrow2img,50,50);
+      image(arrow2img,450,350);
     }
     if (direction == 3) {
-      image(arrow3img,50,50);
+      image(arrow3img,450,350);
     }
     if (direction == 4) {
-      image(arrow4img,50,50);
+      image(arrow4img,450,350);
     }
   }
 }
