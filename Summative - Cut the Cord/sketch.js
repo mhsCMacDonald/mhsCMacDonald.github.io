@@ -67,7 +67,7 @@ function draw() {
 
   //If direction = 3 (down), make the ball fall
   //Since this is the default direction, I put it first
-  if (direction == 3) {
+  if (direction == 3 && hitarrow == true) {
   ballySpeed=ballySpeed+0.2*ballcanmove;
   }
 
@@ -169,7 +169,7 @@ function draw() {
     ellipse(ballx,bally,100); //draw the ball
 
     //Check if the ball is touching a direction-change arrow:
-    hitarrow = collideRectCircle(400,300,100,100,ballx,bally,100);
+    hitarrow = collideRectCircle(450,50,100,100,ballx,bally,100);
     print("Ball touching an arrow? " + hitarrow);
 
     //Check if mouse is touching the circle
@@ -204,34 +204,38 @@ function draw() {
 
     //The next 4 "else if" statements check for key presses.
     else if (keyIsDown(UP_ARROW) || keyIsDown(87)) {
+      image(arrow1img,450,50);
       direction = 1;
       print("Direction set to up");
     }
     else if (keyIsDown(RIGHT_ARROW) || keyIsDown(68)) {
+      image(arrow2img,450,50);
       direction = 2;
       print("Direction set to right");
     }
     else if (keyIsDown(DOWN_ARROW) || keyIsDown(83)) {
+      image(arrow3img,450,50);
       direction = 3;
       print("Direction set to down");
     }
     else if (keyIsDown(LEFT_ARROW) || keyIsDown(65)) {
+      image(arrow4img,450,50);
       direction = 4;
       print("Direction set to left");
     }
 
-    if (direction == 1) {
-      image(arrow1img,450,350);
+    /*if (direction == 1) {
+
     }
     if (direction == 2) {
-      image(arrow2img,450,350);
+
     }
     if (direction == 3) {
-      image(arrow3img,450,350);
+
     }
     if (direction == 4) {
-      image(arrow4img,450,350);
-    }
+
+    } */
   }
 }
 
