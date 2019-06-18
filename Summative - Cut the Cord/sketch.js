@@ -1,11 +1,11 @@
-/* Summative - Cut the Cord
+/* Summative - "The Ball"
 Created by Charlie MacDonald on June 6th, 2019.
 
 DESCRIPTION:
 -Uses if/else statements to make levels - leanred from U4L11 decision structures
 -Applies code/knowledge from "using the keyboard" and "using the mouse"
 -Applies knowledge on using images and sounds from U4L10
--Makes extensive use of variables.
+-Makes extensive use of variables and math to control them.
 
 Global variables to make tweaking easier:*/
 let ballx = 0;
