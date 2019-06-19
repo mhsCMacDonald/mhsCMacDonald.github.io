@@ -2,10 +2,8 @@
 Created by Charlie MacDonald on June 6th, 2019.
 
 DESCRIPTION:
--Uses if/else statements to make levels - leanred from U4L11 decision structures
--Applies code/knowledge from "using the keyboard" and "using the mouse"
--Applies knowledge on using images and sounds from U4L10
--Makes extensive use of variables and math to control them.
+the player must get the ball into the goal zone. 
+As the levels progress, the player will need to use the arrow keys and good timing to win.
 
 Global variables to make tweaking easier:*/
 let ballx = 0;
