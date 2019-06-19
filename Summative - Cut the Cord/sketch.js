@@ -5,6 +5,8 @@ DESCRIPTION:
 the player must get the ball into the goal zone. 
 As the levels progress, the player will need to use the arrow keys and good timing to win.
 
+NOTE that the folder for this summative ("Cut the Cord") is out of date. Github does not let users rename folders.
+
 Global variables to make tweaking easier:*/
 let ballx = 0;
 let bally = 0;
