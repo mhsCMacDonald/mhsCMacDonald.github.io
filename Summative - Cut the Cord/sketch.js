@@ -221,17 +221,14 @@ function draw() {
     else if (keyIsDown(UP_ARROW) || keyIsDown(87)) {
       direction = 1;
       print("Direction set to up");
-      return false;
     }
     else if (keyIsDown(RIGHT_ARROW) || keyIsDown(68)) {
       direction = 2;
       print("Direction set to right");
-      return false;
     }
     else if (keyIsDown(DOWN_ARROW) || keyIsDown(83)) {
       direction = 3;
       print("Direction set to down");
-      return false;
     }
     else if (keyIsDown(LEFT_ARROW) || keyIsDown(65)) {
       direction = 4;
@@ -260,7 +257,7 @@ function draw() {
       textSize(20);
       fill(0);
       text("Level 2",width/24,height/12);
-      text("Change direction by using arrow keys OR WASD.",width/24,height/12+50);
+      text("Change direction by using arrow keys/WASD.",width/24,height/12+50);
 
     //DRAW ARROWS
       if (direction == 1) {
@@ -433,22 +430,18 @@ function draw() {
     else if (keyIsDown(UP_ARROW) || keyIsDown(87)) {
       direction = 1;
       print("Direction set to up");
-      return false;
     }
     else if (keyIsDown(RIGHT_ARROW) || keyIsDown(68)) {
       direction = 2;
       print("Direction set to right");
-      return false;
     }
     else if (keyIsDown(DOWN_ARROW) || keyIsDown(83)) {
       direction = 3;
       print("Direction set to down");
-      return false;
     }
     else if (keyIsDown(LEFT_ARROW) || keyIsDown(65)) {
       direction = 4;
       print("Direction set to left");
-      return false;
     }
   }
 
@@ -548,22 +541,18 @@ function draw() {
     else if (keyIsDown(UP_ARROW) || keyIsDown(87)) {
       direction = 1;
       print("Direction set to up");
-      return false;
     }
     else if (keyIsDown(RIGHT_ARROW) || keyIsDown(68)) {
       direction = 2;
       print("Direction set to right");
-      return false;
     }
     else if (keyIsDown(DOWN_ARROW) || keyIsDown(83)) {
       direction = 3;
       print("Direction set to down");
-      return false;
     }
     else if (keyIsDown(LEFT_ARROW) || keyIsDown(65)) {
       direction = 4;
       print("Direction set to left");
-      return false;
     }
   }
 
